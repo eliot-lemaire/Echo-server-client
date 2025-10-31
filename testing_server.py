@@ -1,11 +1,34 @@
+#   Made by elot-lemaire github
+#   TO DO
+#   Fix error calculations
+
 import asyncio
 import signal
 import logging
 import statistics
 
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="app.log",
+    encoding="utf-8",
+    filemode="a",
+    format="{asctime} | {levelname} | {message}",
+    style="{",
+    datefmt="%Y-%m-%d %H:%M"
+)
+
+
+"""
+logging.debug("Debug message")
+logging.info("Informational message")
+logging.warning("Something seems off")
+logging.error("An error occurred")
+logging.critical("Critical failure")
+"""
+
 class connectionManager:
-    def __init__(self): # Used to initialise the variables for the class
-        self.active = set() # List that's unordered, doesn't allow duplicates and is optimised for speed
+    def __init__(self): 
+        self.active = set() 
         self.shutting_down = False
 
     async def add(self, writer):
@@ -15,104 +38,107 @@ class connectionManager:
             return False
         self.active.add(writer)
         addr = writer.get_extra_info("peername")
-        print(f"Connection added from {addr}")
-        print(f"active: {len(self.active)}")
+        logging.info(f"Connection added from {addr}")
+        logging.info(f"Active connections: {len(self.active)}")
         return True
     
     def remove(self, writer):  
         if writer in self.active:
             self.active.remove(writer)
-            print(f"Active : {len(self.active)}")
+            logging.info(f"Active connections: {len(self.active)}")
 
     async def close_all(self):
         self.shutting_down = True
-        print(f"\nClosing {len(self.active)} connections...")
+        logging.info(f"Closing {len(self.active)} active connection(s)...")
         for w in self.active:
             w.close()
         if self.active:
-            await asyncio.gather(*(w.wait_closed() for w in list(self.active)), return_exceptions=True) # look in notes for breakdown
-        print("All connections closed.")
+            await asyncio.gather(*(w.wait_closed() for w in list(self.active)), return_exceptions=True)
+        logging.info("All connections closed.")
 
 mgr = connectionManager()
 
 async def handle_client(reader, writer):
-
-    #################################################################################
-
     """
-    Seeing is the server is shutting down, if it is then stop the handle client function.
-    We are seeing if the add function returns True or False.
-    If it returns False we stop the function.
+    Checks if the server is shutting down; if so, stop handling the client.
+    The add() function returns True or False depending on the state.
+    If it returns False, we stop the function.
     """
 
     if not await mgr.add(writer):  
         return
     
-    #################################################################################
-    
     addr = writer.get_extra_info("peername")
-    print(f"New: {addr}")
+    logging.info(f"New connection: {addr}")
 
     output_tracker = []
 
     try:
         while True:
-
             try:
                 data = await asyncio.wait_for(reader.read(100), timeout=30.0)
-                print("No timeout error continuing the communication")
+                logging.debug("No timeout error, continuing communication")
                 output_tracker.append(1)
 
             except asyncio.TimeoutError:
-                print(f"Timeout error from {addr}")
+                logging.error(f"Timeout error from {addr}")
                 output_tracker.append(0)
-                break   # Breaks from the while true loop
+                break
 
             if not data:
-                print("Client sent no data shutting down client")
-                print(f"Graceful close {addr}")
-                break   # Breaks from the while true loop
+                logging.info("Client sent no data — closing connection")
+                logging.info(f"Graceful close: {addr}")
+                break
 
             msg = data.decode().strip()
-            writer.write(f"ECHO: {msg}\n".encode())
+            writer.write(f"ECHO: {msg}".encode())
             await writer.drain()
 
-            print("Client sucsessful")
+            logging.info("Client message successfully echoed")
 
-    except ConnectionResetError:    # Error if the client drops the connection
-        print(f"Client dropped connection, how rude: {addr}")
+    except ConnectionResetError:
+        logging.error(f"Client unexpectedly dropped the connection: {addr}")
         output_tracker.append(0)
 
     finally:
         mgr.remove(writer)
         writer.close()
-        print(f"Error rate: {(statistics.mean(output_tracker)*100)-100}%")
+
+        """
+        error_rate = statistics.mean(output_tracker) * 100
+        if error_rate >= 100:
+            error_rate -= 100
+        else:
+            error_rate += 100
+        logging.debug(f"Error rate: {error_rate:.2f}% from {addr}")
+        """
 
 async def main():
     try:
         server = await asyncio.start_server(handle_client, "127.0.0.1", 9001)
     except OSError as e:
         if e.errno == 48:
-            print("Server already running")
+            logging.error("Server is already running on port 9001")
             return
-    loop = asyncio.get_running_loop()   # Gets the current event loop
-    stop = asyncio.Event()  # Define event False
-    def on_signal():
-        print("\nSignal -> shutdown...")
-        stop.set()  # sets event to True
 
-    #   After this dont know
-    for sig in (signal.SIGINT, signal.SIGTERM): # Ctrl + C && Unix kill command
-        loop.add_signal_handler(sig, on_signal) # When one signal is called on_signal is run
-    print("Server on localhost:9001 - Ctrl + C to stop")
-    
+    loop = asyncio.get_running_loop()
+    stop = asyncio.Event()
+
+    def on_signal():
+        logging.info("Received termination signal → shutting down...")
+        stop.set()
+
+    for sig in (signal.SIGINT, signal.SIGTERM):
+        loop.add_signal_handler(sig, on_signal)
+
+    logging.debug("Server running on localhost:9001 — press Ctrl+C to stop")
+
     async with server:
         await stop.wait()
         server.close()
         await server.wait_closed()
         await mgr.close_all()
-    print("Shutdown complete")
-    #print(output_tracker)
+    logging.info("Shutdown complete")
 
 if __name__ == "__main__":
     asyncio.run(main())

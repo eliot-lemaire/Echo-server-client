@@ -1,11 +1,20 @@
 #   Made by elot-lemaire github
 #   TO DO
-#   Fix error calculations
+#   Latency
+
+"""
+Added:
+1) Error percent
+2) Latency
+3) Logging
+"""
+
 
 import asyncio
 import signal
 import logging
 import statistics
+import time
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -72,11 +81,13 @@ async def handle_client(reader, writer):
     logging.info(f"New connection: {addr}")
 
     output_tracker = []
+    total_latency = 0
 
     try:
         while True:
             try:
-                data = await asyncio.wait_for(reader.read(100), timeout=30.0)
+                start = time.perf_counter()
+                data = await asyncio.wait_for(reader.read(100), timeout=5.0)
                 logging.debug("No timeout error, continuing communication")
                 output_tracker.append(1)
 
@@ -91,10 +102,14 @@ async def handle_client(reader, writer):
                 break
 
             msg = data.decode().strip()
-            writer.write(f"ECHO: {msg}".encode())
+            writer.write(f"ECHO: {msg}\n".encode())
             await writer.drain()
 
-            logging.info("Client message successfully echoed")
+            end = time.perf_counter()
+            latency = end - start
+
+            logging.info(f"Client message successfully echoed with a latency of {latency:.6f}ms")
+            total_latency =+ latency
 
     except ConnectionResetError:
         logging.error(f"Client unexpectedly dropped the connection: {addr}")
@@ -104,14 +119,14 @@ async def handle_client(reader, writer):
         mgr.remove(writer)
         writer.close()
 
-        """
-        error_rate = statistics.mean(output_tracker) * 100
-        if error_rate >= 100:
-            error_rate -= 100
+        if output_tracker:
+            error_rate = statistics.mean(output_tracker) * 100
+            if output_tracker.count(1) == len(output_tracker):
+                error_rate = 0
         else:
-            error_rate += 100
+            error_rate = 0
         logging.debug(f"Error rate: {error_rate:.2f}% from {addr}")
-        """
+        logging.debug(f"Total latency from {addr} was {total_latency:.6f}ms")
 
 async def main():
     try:
@@ -141,4 +156,6 @@ async def main():
     logging.info("Shutdown complete")
 
 if __name__ == "__main__":
+    asyncio.run(main())
+
     asyncio.run(main())

@@ -1,6 +1,4 @@
 #   Made by elot-lemaire github
-#   TO DO
-#   Latency
 
 """
 Added:
@@ -81,6 +79,7 @@ async def handle_client(reader, writer):
     logging.info(f"New connection: {addr}")
 
     output_tracker = []
+    latency_list = []
     total_latency = 0
 
     try:
@@ -106,10 +105,11 @@ async def handle_client(reader, writer):
             await writer.drain()
 
             end = time.perf_counter()
-            latency = end - start
+            latency = (end - start)
 
             logging.info(f"Client message successfully echoed with a latency of {latency:.6f}ms")
-            total_latency =+ latency
+            total_latency = total_latency + latency
+            latency_list.append(latency)
 
     except ConnectionResetError:
         logging.error(f"Client unexpectedly dropped the connection: {addr}")
@@ -125,8 +125,13 @@ async def handle_client(reader, writer):
                 error_rate = 0
         else:
             error_rate = 0
-        logging.debug(f"Error rate: {error_rate:.2f}% from {addr}")
-        logging.debug(f"Total latency from {addr} was {total_latency:.6f}ms")
+
+        if latency_list:
+            logging.debug(f"Error rate: {error_rate:.2f}% from {addr}")
+            logging.debug(f"Total latency from {addr} was {total_latency:.6f}ms")
+            logging.debug(f"average latency time is {statistics.mean(latency_list):.6f}ms")
+            logging.debug(f"The min latency was {min(latency_list):.6f}ms")
+            logging.debug(f"The max latency was {max(latency_list):.6f}ms")
 
 async def main():
     try:
@@ -158,4 +163,3 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
-    asyncio.run(main())

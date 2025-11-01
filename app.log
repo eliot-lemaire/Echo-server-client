@@ -10,3 +10,305 @@
 2025-10-31 23:41 | INFO | Closing 0 active connection(s)...
 2025-10-31 23:41 | INFO | All connections closed.
 2025-10-31 23:41 | INFO | Shutdown complete
+2025-10-31 23:46 | DEBUG | Using selector: EpollSelector
+2025-10-31 23:46 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-10-31 23:46 | INFO | Received termination signal → shutting down...
+2025-10-31 23:46 | INFO | Closing 0 active connection(s)...
+2025-10-31 23:46 | INFO | All connections closed.
+2025-10-31 23:46 | INFO | Shutdown complete
+2025-10-31 23:46 | DEBUG | Using selector: EpollSelector
+2025-10-31 23:46 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-10-31 23:48 | DEBUG | Using selector: EpollSelector
+2025-10-31 23:48 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-10-31 23:48 | DEBUG | Using selector: EpollSelector
+2025-10-31 23:48 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-10-31 23:48 | DEBUG | Using selector: EpollSelector
+2025-10-31 23:48 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-10-31 23:50 | INFO | Received termination signal → shutting down...
+2025-10-31 23:50 | INFO | Closing 0 active connection(s)...
+2025-10-31 23:50 | INFO | All connections closed.
+2025-10-31 23:50 | INFO | Shutdown complete
+2025-10-31 23:50 | DEBUG | Using selector: EpollSelector
+2025-10-31 23:50 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-10-31 23:50 | INFO | Received termination signal → shutting down...
+2025-10-31 23:50 | INFO | Closing 0 active connection(s)...
+2025-10-31 23:50 | INFO | All connections closed.
+2025-10-31 23:50 | INFO | Shutdown complete
+2025-11-01 10:50 | DEBUG | Using selector: EpollSelector
+2025-11-01 10:50 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 10:51 | INFO | Received termination signal → shutting down...
+2025-11-01 10:51 | INFO | Closing 0 active connection(s)...
+2025-11-01 10:51 | INFO | All connections closed.
+2025-11-01 10:51 | INFO | Shutdown complete
+2025-11-01 10:52 | DEBUG | Using selector: EpollSelector
+2025-11-01 10:52 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 10:52 | INFO | Connection added from ('127.0.0.1', 47224)
+2025-11-01 10:52 | INFO | Active connections: 1
+2025-11-01 10:52 | INFO | New connection: ('127.0.0.1', 47224)
+2025-11-01 10:52 | DEBUG | No timeout error, continuing communication
+2025-11-01 10:52 | INFO | Client message successfully echoed with a latency of 3.281470ms
+2025-11-01 10:53 | DEBUG | No timeout error, continuing communication
+2025-11-01 10:53 | INFO | Client message successfully echoed with a latency of 7.418486ms
+2025-11-01 10:53 | DEBUG | No timeout error, continuing communication
+2025-11-01 10:53 | INFO | Client message successfully echoed with a latency of 2.763039ms
+2025-11-01 10:53 | DEBUG | No timeout error, continuing communication
+2025-11-01 10:53 | INFO | Client message successfully echoed with a latency of 1.853831ms
+2025-11-01 10:53 | DEBUG | No timeout error, continuing communication
+2025-11-01 10:53 | INFO | Client message successfully echoed with a latency of 0.416426ms
+2025-11-01 10:53 | ERROR | Timeout error from ('127.0.0.1', 47224)
+2025-11-01 10:53 | INFO | Active connections: 0
+2025-11-01 10:54 | INFO | Received termination signal → shutting down...
+2025-11-01 10:54 | INFO | Closing 0 active connection(s)...
+2025-11-01 10:54 | INFO | All connections closed.
+2025-11-01 10:54 | INFO | Shutdown complete
+2025-11-01 11:02 | DEBUG | Using selector: EpollSelector
+2025-11-01 11:02 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 11:02 | INFO | Connection added from ('127.0.0.1', 42608)
+2025-11-01 11:02 | INFO | Active connections: 1
+2025-11-01 11:02 | INFO | New connection: ('127.0.0.1', 42608)
+2025-11-01 11:02 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:02 | INFO | Client message successfully echoed with a latency of 2.219840ms
+2025-11-01 11:02 | ERROR | Timeout error from ('127.0.0.1', 42608)
+2025-11-01 11:02 | INFO | Active connections: 0
+2025-11-01 11:02 | DEBUG | Error rate: 50.00% from ('127.0.0.1', 42608)
+2025-11-01 11:03 | INFO | Connection added from ('127.0.0.1', 57472)
+2025-11-01 11:03 | INFO | Active connections: 1
+2025-11-01 11:03 | INFO | New connection: ('127.0.0.1', 57472)
+2025-11-01 11:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:03 | INFO | Client message successfully echoed with a latency of 0.606966ms
+2025-11-01 11:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:03 | INFO | Client message successfully echoed with a latency of 0.624245ms
+2025-11-01 11:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:03 | INFO | Client message successfully echoed with a latency of 0.610886ms
+2025-11-01 11:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:03 | INFO | Client sent no data — closing connection
+2025-11-01 11:03 | INFO | Graceful close: ('127.0.0.1', 57472)
+2025-11-01 11:03 | INFO | Active connections: 0
+2025-11-01 11:03 | DEBUG | Error rate: 100.00% from ('127.0.0.1', 57472)
+2025-11-01 11:03 | INFO | Received termination signal → shutting down...
+2025-11-01 11:03 | INFO | Closing 0 active connection(s)...
+2025-11-01 11:03 | INFO | All connections closed.
+2025-11-01 11:03 | INFO | Shutdown complete
+2025-11-01 11:15 | DEBUG | Using selector: EpollSelector
+2025-11-01 11:15 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 11:15 | INFO | Connection added from ('127.0.0.1', 55536)
+2025-11-01 11:15 | INFO | Active connections: 1
+2025-11-01 11:15 | INFO | New connection: ('127.0.0.1', 55536)
+2025-11-01 11:15 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:15 | INFO | Client message successfully echoed with a latency of 0.883754ms
+2025-11-01 11:15 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:15 | INFO | Client message successfully echoed with a latency of 1.192325ms
+2025-11-01 11:15 | ERROR | Timeout error from ('127.0.0.1', 55536)
+2025-11-01 11:15 | INFO | Active connections: 0
+2025-11-01 11:15 | DEBUG | Error rate: 66.67% from ('127.0.0.1', 55536)
+2025-11-01 11:16 | INFO | Connection added from ('127.0.0.1', 41794)
+2025-11-01 11:16 | INFO | Active connections: 1
+2025-11-01 11:16 | INFO | New connection: ('127.0.0.1', 41794)
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 0.319160ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 0.340549ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 0.357089ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 0.369208ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 0.399639ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 1.097595ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client sent no data — closing connection
+2025-11-01 11:16 | INFO | Graceful close: ('127.0.0.1', 41794)
+2025-11-01 11:16 | INFO | Active connections: 0
+2025-11-01 11:16 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 41794)
+2025-11-01 11:16 | INFO | Connection added from ('127.0.0.1', 51562)
+2025-11-01 11:16 | INFO | Active connections: 1
+2025-11-01 11:16 | INFO | New connection: ('127.0.0.1', 51562)
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 2.807226ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 3.321832ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 1.987601ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client message successfully echoed with a latency of 1.696597ms
+2025-11-01 11:16 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:16 | INFO | Client sent no data — closing connection
+2025-11-01 11:16 | INFO | Graceful close: ('127.0.0.1', 51562)
+2025-11-01 11:16 | INFO | Active connections: 0
+2025-11-01 11:16 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 51562)
+2025-11-01 11:17 | INFO | Received termination signal → shutting down...
+2025-11-01 11:17 | INFO | Closing 0 active connection(s)...
+2025-11-01 11:17 | INFO | All connections closed.
+2025-11-01 11:17 | INFO | Shutdown complete
+2025-11-01 11:17 | DEBUG | Using selector: EpollSelector
+2025-11-01 11:17 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 11:17 | INFO | Connection added from ('127.0.0.1', 60260)
+2025-11-01 11:17 | INFO | Active connections: 1
+2025-11-01 11:17 | INFO | New connection: ('127.0.0.1', 60260)
+2025-11-01 11:17 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:17 | INFO | Client message successfully echoed with a latency of 0.655634ms
+2025-11-01 11:17 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:17 | INFO | Client message successfully echoed with a latency of 0.690900ms
+2025-11-01 11:17 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:17 | INFO | Client message successfully echoed with a latency of 0.637727ms
+2025-11-01 11:17 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:17 | INFO | Client sent no data — closing connection
+2025-11-01 11:17 | INFO | Graceful close: ('127.0.0.1', 60260)
+2025-11-01 11:17 | INFO | Active connections: 0
+2025-11-01 11:17 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 60260)
+2025-11-01 11:17 | INFO | Received termination signal → shutting down...
+2025-11-01 11:17 | INFO | Closing 0 active connection(s)...
+2025-11-01 11:17 | INFO | All connections closed.
+2025-11-01 11:17 | INFO | Shutdown complete
+2025-11-01 11:24 | DEBUG | Using selector: EpollSelector
+2025-11-01 11:24 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 11:24 | INFO | Connection added from ('127.0.0.1', 44230)
+2025-11-01 11:24 | INFO | Active connections: 1
+2025-11-01 11:24 | INFO | New connection: ('127.0.0.1', 44230)
+2025-11-01 11:24 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:24 | INFO | Client message successfully echoed with a latency of 1.633937ms
+2025-11-01 11:24 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:24 | INFO | Client message successfully echoed with a latency of 2.783015ms
+2025-11-01 11:24 | DEBUG | No timeout error, continuing communication
+2025-11-01 11:24 | INFO | Client sent no data — closing connection
+2025-11-01 11:24 | INFO | Graceful close: ('127.0.0.1', 44230)
+2025-11-01 11:24 | INFO | Active connections: 0
+2025-11-01 11:24 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 44230)
+2025-11-01 11:24 | DEBUG | Total latency from ('127.0.0.1', 44230) was 2.783015ms
+2025-11-01 15:03 | DEBUG | Using selector: EpollSelector
+2025-11-01 15:03 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 15:03 | INFO | Connection added from ('127.0.0.1', 42522)
+2025-11-01 15:03 | INFO | Active connections: 1
+2025-11-01 15:03 | INFO | New connection: ('127.0.0.1', 42522)
+2025-11-01 15:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:03 | INFO | Client message successfully echoed with a latency of 0.000492ms
+2025-11-01 15:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:03 | INFO | Client message successfully echoed with a latency of 0.000574ms
+2025-11-01 15:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:03 | INFO | Client message successfully echoed with a latency of 0.000574ms
+2025-11-01 15:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:03 | INFO | Client message successfully echoed with a latency of 0.000503ms
+2025-11-01 15:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:03 | INFO | Client message successfully echoed with a latency of 0.000522ms
+2025-11-01 15:03 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:03 | INFO | Client sent no data — closing connection
+2025-11-01 15:03 | INFO | Graceful close: ('127.0.0.1', 42522)
+2025-11-01 15:03 | INFO | Active connections: 0
+2025-11-01 15:03 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 42522)
+2025-11-01 15:03 | DEBUG | Total latency from ('127.0.0.1', 42522) was 0.000522ms
+2025-11-01 15:05 | INFO | Received termination signal → shutting down...
+2025-11-01 15:05 | INFO | Closing 0 active connection(s)...
+2025-11-01 15:05 | INFO | All connections closed.
+2025-11-01 15:05 | INFO | Shutdown complete
+2025-11-01 15:05 | DEBUG | Using selector: EpollSelector
+2025-11-01 15:05 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 15:05 | INFO | Connection added from ('127.0.0.1', 52014)
+2025-11-01 15:05 | INFO | Active connections: 1
+2025-11-01 15:05 | INFO | New connection: ('127.0.0.1', 52014)
+2025-11-01 15:05 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:05 | INFO | Client message successfully echoed with a latency of 0.685041ms
+2025-11-01 15:05 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:05 | INFO | Client message successfully echoed with a latency of 0.575828ms
+2025-11-01 15:05 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:05 | INFO | Client message successfully echoed with a latency of 0.481398ms
+2025-11-01 15:05 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:05 | INFO | Client message successfully echoed with a latency of 0.199411ms
+2025-11-01 15:05 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:05 | INFO | Client message successfully echoed with a latency of 0.167422ms
+2025-11-01 15:05 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:05 | INFO | Client sent no data — closing connection
+2025-11-01 15:05 | INFO | Graceful close: ('127.0.0.1', 52014)
+2025-11-01 15:05 | INFO | Active connections: 0
+2025-11-01 15:05 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 52014)
+2025-11-01 15:05 | DEBUG | Total latency from ('127.0.0.1', 52014) was 0.167422ms
+2025-11-01 15:10 | INFO | Received termination signal → shutting down...
+2025-11-01 15:10 | INFO | Closing 0 active connection(s)...
+2025-11-01 15:10 | INFO | All connections closed.
+2025-11-01 15:10 | INFO | Shutdown complete
+2025-11-01 15:11 | DEBUG | Using selector: EpollSelector
+2025-11-01 15:11 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 15:11 | INFO | Connection added from ('127.0.0.1', 58452)
+2025-11-01 15:11 | INFO | Active connections: 1
+2025-11-01 15:11 | INFO | New connection: ('127.0.0.1', 58452)
+2025-11-01 15:11 | ERROR | Timeout error from ('127.0.0.1', 58452)
+2025-11-01 15:11 | INFO | Active connections: 0
+2025-11-01 15:11 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 58452)
+2025-11-01 15:11 | DEBUG | Total latency from ('127.0.0.1', 58452) was 0.000000ms
+2025-11-01 15:11 | ERROR | Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=8>
+Traceback (most recent call last):
+  File "testing_server.py", line 132, in handle_client
+    logging.debug(f"average latency time is {statistics.mean(latency_list):.6f}ms")
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/statistics.py", line 486, in mean
+    raise StatisticsError('mean requires at least one data point')
+statistics.StatisticsError: mean requires at least one data point
+2025-11-01 15:12 | INFO | Connection added from ('127.0.0.1', 43298)
+2025-11-01 15:12 | INFO | Active connections: 1
+2025-11-01 15:12 | INFO | New connection: ('127.0.0.1', 43298)
+2025-11-01 15:12 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:12 | INFO | Client sent no data — closing connection
+2025-11-01 15:12 | INFO | Graceful close: ('127.0.0.1', 43298)
+2025-11-01 15:12 | INFO | Active connections: 0
+2025-11-01 15:12 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 43298)
+2025-11-01 15:12 | DEBUG | Total latency from ('127.0.0.1', 43298) was 0.000000ms
+2025-11-01 15:12 | ERROR | Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=8>
+Traceback (most recent call last):
+  File "testing_server.py", line 132, in handle_client
+    logging.debug(f"average latency time is {statistics.mean(latency_list):.6f}ms")
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/statistics.py", line 486, in mean
+    raise StatisticsError('mean requires at least one data point')
+statistics.StatisticsError: mean requires at least one data point
+2025-11-01 15:13 | INFO | Received termination signal → shutting down...
+2025-11-01 15:13 | INFO | Closing 0 active connection(s)...
+2025-11-01 15:13 | INFO | All connections closed.
+2025-11-01 15:13 | INFO | Shutdown complete
+2025-11-01 15:13 | DEBUG | Using selector: EpollSelector
+2025-11-01 15:13 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 15:13 | INFO | Connection added from ('127.0.0.1', 38580)
+2025-11-01 15:13 | INFO | Active connections: 1
+2025-11-01 15:13 | INFO | New connection: ('127.0.0.1', 38580)
+2025-11-01 15:13 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:13 | INFO | Client message successfully echoed with a latency of 1076.206027ms
+2025-11-01 15:13 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:13 | INFO | Client message successfully echoed with a latency of 1413.854178ms
+2025-11-01 15:13 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:13 | INFO | Client message successfully echoed with a latency of 1348.010164ms
+2025-11-01 15:14 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:14 | INFO | Client sent no data — closing connection
+2025-11-01 15:14 | INFO | Graceful close: ('127.0.0.1', 38580)
+2025-11-01 15:14 | INFO | Active connections: 0
+2025-11-01 15:14 | DEBUG | Error rate: 0.00% from ('127.0.0.1', 38580)
+2025-11-01 15:14 | DEBUG | Total latency from ('127.0.0.1', 38580) was 3838.070369ms
+2025-11-01 15:14 | DEBUG | average latency time is 1279.356790ms
+2025-11-01 15:14 | DEBUG | The min latency was 1076.206027ms
+2025-11-01 15:14 | DEBUG | The max latency was 1413.854178ms
+2025-11-01 15:14 | INFO | Received termination signal → shutting down...
+2025-11-01 15:14 | INFO | Closing 0 active connection(s)...
+2025-11-01 15:14 | INFO | All connections closed.
+2025-11-01 15:14 | INFO | Shutdown complete
+2025-11-01 15:14 | DEBUG | Using selector: EpollSelector
+2025-11-01 15:14 | DEBUG | Server running on localhost:9001 — press Ctrl+C to stop
+2025-11-01 15:14 | INFO | Connection added from ('127.0.0.1', 54782)
+2025-11-01 15:14 | INFO | Active connections: 1
+2025-11-01 15:14 | INFO | New connection: ('127.0.0.1', 54782)
+2025-11-01 15:14 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:14 | INFO | Client message successfully echoed with a latency of 1.362437ms
+2025-11-01 15:14 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:14 | INFO | Client message successfully echoed with a latency of 1.055539ms
+2025-11-01 15:14 | DEBUG | No timeout error, continuing communication
+2025-11-01 15:14 | INFO | Client message successfully echoed with a latency of 1.075081ms
+2025-11-01 15:14 | ERROR | Timeout error from ('127.0.0.1', 54782)
+2025-11-01 15:14 | INFO | Active connections: 0
+2025-11-01 15:14 | DEBUG | Error rate: 75.00% from ('127.0.0.1', 54782)
+2025-11-01 15:14 | DEBUG | Total latency from ('127.0.0.1', 54782) was 3.493057ms
+2025-11-01 15:14 | DEBUG | average latency time is 1.164352ms
+2025-11-01 15:14 | DEBUG | The min latency was 1.055539ms
+2025-11-01 15:14 | DEBUG | The max latency was 1.362437ms
+2025-11-01 15:15 | INFO | Received termination signal → shutting down...
+2025-11-01 15:15 | INFO | Closing 0 active connection(s)...
+2025-11-01 15:15 | INFO | All connections closed.
+2025-11-01 15:15 | INFO | Shutdown complete

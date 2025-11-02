@@ -107,7 +107,7 @@ async def handle_client(reader, writer):
             end = time.perf_counter()
             latency = (end - start)
 
-            logging.info(f"Client message successfully echoed with a latency of {latency:.6f}ms")
+            logging.info(f"Client {addr} : | {msg} | with a latency of {latency:.6f}ms")
             total_latency = total_latency + latency
             latency_list.append(latency)
 
@@ -162,4 +162,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
